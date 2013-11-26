@@ -1,0 +1,166 @@
+
+#icon{margin:auto;}
+ul#icon_box{ width:320px; margin:0px auto; list-style-type:none;}
+ul#icon_box:after{ content:"."; display:block; visibility:hidden; height:0; margin:auto; }
+ul#icon_box li{ width:70px; float:left; padding-left: 0px;}
+ul#icon_box li a{ display:block; padding-top:90px; line-height:18px; font-size:14px; font-weight:bold; color:#585858; font-family:Arial, Helvetica, sans-serif; text-align:center; text-decoration:none; margin-bottom:05px; margin-left:0px; min-height:40px;}
+ul#icon_box li a.i_popuslar_stores, ul#icon_box li a.i_categories, ul#icon_box li a.i_deals, ul#icon_box li a.i_coupons, ul#icon_box li a.i_printable, ul#icon_box li a.i_exclusive_offers,ul#icon_box li a.i_coupons1,ul#icon_box li a.i_coupons2{ width:85px; background:url(../images/categories.png) no-repeat; margin:0px 0px 0px 0px;}
+
+.top_coupons{margin:50px 0px 0px 100px;}
+.categories_coupons{margin:110px 0px 0px -03px;}
+.search_coupons{margin:-125px 0px 0px 32px;}
+.shipping_coupons{margin:-40px 0px 0px -43px;}
+.recent_coupons{margin:-40px 0px 0px 20px;}
+
+
+ul#icon_box li a.i_popuslar_stores{ background-position:100px 0px;}
+ul#icon_box li a.i_categories{ background-position:1px 0px;}
+ul#icon_box li a.i_deals{background-position:100px 0px;}
+ul#icon_box li a.i_coupons{background-position:-85px 0px;}
+ul#icon_box li a.i_printable{background-position:100px 0px;}
+ul#icon_box li a.i_exclusive_offers{background-position:-342px 0px;}
+ul#icon_box li a.i_coupons1{background-position:-170px 0px;}
+ul#icon_box li a.i_coupons2{background-position:-255px 0px;}
+
+
+.bgimg {
+    
+    background-repeat:repeat-x;
+    background-position:100% 120px, 100% -120px;
+    background-size:100% 180px;
+}
+.logo-font {
+    font-size:x-large;
+    font-weight:bold;
+}
+
+.img21 {
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    }
+    
+    
+    
+    
+    /* MovieFinder:main.css */
+  
+
+/* iPhone4+ */
+@media only screen and (max-width: 960px) and (orientation:portrait){
+	#header {background:url("img/logo.png") 50% 0% no-repeat!important;height: 75px;}
+	#postercell {width:50%!important;}
+	#postercell img{padding-right:5%!important;padding-top:15px;}
+	
+	#infocell {width: 40%!important;}
+}
+@media only screen and (max-width: 960px) and (orientation:landscape){
+	#header {background:url("img/logo.png") 50% 0% no-repeat!important;height: 75px;}
+	#postercell {width:50%!important;}
+	#postercell img{padding-right:5%!important;padding-top:15px;}
+	#infocell {width: 40%!important;}
+}
+
+
+/* iPhone3Gs */
+@media only screen and (max-width: 480px) and (orientation:portrait){
+	#header {background:url("img/logo-small.png") 50% 0% no-repeat !important;height: 55px!important;}
+	#postercell {width:47%!important;}
+	#postercell img{padding-right:4%!important;}
+	#mob{display:inline!important;}
+	#ipad{display:none!important;}
+	#infocell {width: 53%!important;}
+}
+@media only screen and (max-width: 480px) and (orientation:landscape){
+	#header {background:url("img/logo-small.png") 0% 0% no-repeat !important;height: 55px!important;}
+	#postercell {width:35%!important;}
+	#postercell img{padding-right:4%!important;}
+	#mob{display:inline!important;}
+	#ipad{display:none!important;}
+	#infocell {width: 55%!important;}
+}
+
+/* Main Page */
+BODY {background-color: #ffffff;}
+/*a.ui-link-inherit {padding-left: 75px!important;}*/
+#header {background:url("img/logo.png") 0% 0% no-repeat;height: 75px;}
+#header h1{text-indent:-999px;margin:0 0;}
+#notfound {background:url("img/alert.png") 50% 0% no-repeat;text-align:center;height:60px;}
+#notfound h5 {margin-top:30px;padding-top:50px;}
+#loader {background:url("img/loader.gif") 50% 0% no-repeat;height: 75px;}
+#loader h4{text-indent:-999px;margin:0 0;}
+#img_button_1.ui-btn-inner{border: none !important;}
+
+/* Detail Page */
+#mob{display:none;}
+#ipad{display:inline;}
+
+.promotion_code{ margin:20px auto; text-align:center; width:320px}
+.promotion_code p{ margin:5px 0px; font-family:Arial, Helvetica, sans-serif; text-align:left; color:#F01000; font-size:14px; font-weight:bold; text-align: center;}
+.promotion_code .deal_desc{ margin:5px 0px; font-family:Arial, Helvetica, sans-serif; text-align:center; color:#666666; font-size:14px; font-weight:bold}
+.promotion_code .code{ padding:10px 15px; color:#009933; font-size:16px; font-weight:bold; border:3px dashed #c1c1c1; width:auto; text-align:center; margin:10px auto 20px auto; display:inline-block; box-shadow:2px 3px 3px #e7e7e7; font-family:Verdana, Arial, Helvetica, sans-serif;}
+
+#detailpanel {border-top: 1px solid rgba(255, 255, 255, 0.3);border-radius: 1em 1em 1em 1em;border-bottom: 1px solid rgba(255, 255, 255, 0.3)}
+#grid{margin-top: 10px;margin-bottom: 10px;}
+#postercell {text-align:right;}
+#postercell img{padding-right:5%;padding-top:15px;}
+#infocell h2{margin-top:0px;margin-bottom:2px;}
+#infocell h1{margin-bottom:0px;margin-top:0px;}
+#rating-subtitle{font-size:0.8em;margin-top:0px;margin-bottom:2px;}
+#genre {font-size:0.9em;margin-top:0px;margin-bottom:2px;}
+#cast {font-size:0.9em;margin-top:15px;margin-bottom:2px;}
+h1.passed {color:#66cc33;}
+h1.failed {color:#cc3333;}
+#detail-loader {background:url("img/loader.gif") 50% 0% no-repeat;height: 75px;}
+#detail-loader h4{text-indent:-999px;margin:0 0;}
+.ui-grid-a img {
+    width  : 100%;
+    height : auto;
+    margin: 10px;
+    alignment-adjust: central;
+}
+.ui-grid-a div{
+    padding: 5px;
+}
+
+.imagecaption{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+/*@media all and (min-width: 25em) {
+	.myGrid.ui-grid-a .ui-block-a { width: 49.95%; }
+	.myGrid.ui-grid-a .ui-block-b, 
+	.myGrid.ui-grid-a .ui-block-c { width: 24.925%; }
+	.myGrid.ui-grid-a .ui-block-a { clear: left; }
+	}
+*/
+
+@media all and (max-width: 10em) {
+  .myGrid.ui-block-a,
+  .myGrid.ui-block-b, 
+  .myGrid.ui-block-c,
+  .myGrid.ui-block-d,
+  .myGrid.ui-block-e { 
+    width: 50%; 
+    float:none; 
+  }
+}
+
+@media all and (min-width: 10em) {
+	.my-breakpoint.ui-grid-a .ui-block-a { width: 74.95%; }
+	.my-breakpoint.ui-grid-a .ui-block-b, 
+	.my-breakpoint.ui-grid-a .ui-block-c { width: 24.925%; }
+	.my-breakpoint.ui-grid-a .ui-block-a { clear: right; }
+	}
+}
+
+
+
+.empty{
+    height: 100px;
+}
+

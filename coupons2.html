@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+	<title>Online Promo Codes, Discount Coupons for USA/UK/Canada :ClickSnM</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="css/css.css" />
+	<link rel="stylesheet" href="themes/custom-theme.css" />
+	<link rel="stylesheet" href="css/jqmStructure.css" /> 
+        <script type="text/javascript" src="js/jq191.min.js"></script>
+        <script type="text/javascript" src="js/jqm132.js"></script>
+	<script src="js/load2.js" type="text/javascript" ></script>
+</head> 
+<body>
+	<!-- Main Page -->
+	<div data-role="page" data-theme="b" id="sList">
+
+	<div data-role="header" data-theme="b" data-position="fixed">
+		<a href="#" data-rel="back" data-add-back-btn="true" data-back-btn-text="Back">back</a>
+	<h1>Coupons</h1>
+	<a  href="index.html"data-icon="home" data-iconpos="right">home</a>
+        </div>
+	
+	<div data-role="content" data-isscroll="true" id="couponsList">
+		
+		<div data-role="navbar" >
+			<ul>
+				<li><a href="#" id="storeName" class="tab ui-btn-active" ">Store</a></li>
+				<li><a href="#" class="tab">Related Stores</a></li>
+			</ul>
+		</div>
+			<!-- No results warning (initially hided) -->
+			<div id="notfound"><center><img src='images/alert.png'/>
+				</br><h5>no results found</h5></center></div>		
+			<!-- Results container -->
+			<ul id="results" data-role="listview" data-inset="true" data-filter="true" data-theme="a">
+			</ul>			
+			
+			<!-- Ajax loader -->
+			<div id="loader"><center><img src='images/loader.gif'/>
+				</br><h5>Loading...</h5></center></div>
+			
+			
+	</div>
+	<center><div id="showAll">
+	<!--<a id='showAll' data-role="button" data-inline="true" data-theme="c"href='#'>Load more...</a>-->
+	</div></center>
+	
+	
+	<script>
+	var curTab;
+	
+	$(document).on("pageinit", "#sList", function() {
+		
+	    $("a.tab").click(function(event){
+		alert("under page init");
+		//recentCoupons();
+		var item = $(this).text();
+		//alert(item);
+		if (item != "Related Stores") {
+			alert("under in bound");
+			//sessionStorage.removeItem('key');
+			//sessionStorage.setItem('key', 'http://www.morenmoredeals.com/ws/api/Json.php?data=freeShipping');
+			
+			StoreIdKey= sessionStorage.getItem('storeId');
+			alert(StoreIdKey);
+			storeCoupons(StoreIdKey);
+		}else
+		{   //sessionStorage.removeItem('key');
+			StoreIdKey= sessionStorage.getItem('storeId');
+		relatedCoupons(StoreIdKey);	
+		}
+
+        curTab = item;
+    });
+});
+
+$(document).delegate("#sList", "pagebeforeshow", function() {
+	var storeNa=sessionStorage.getItem('storeName');
+	if (storeNa!=null) {
+	$("#storeName .ui-btn-text").text(storeNa);
+	}
+	else{
+		$("#storeName .ui-btn-text").text("coupons");
+	}
+	//alert("under page show");
+    $("a.tab").first().click();
+  
+});
+
+</script>
+
+</body>
+</html>

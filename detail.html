@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+	<title>mClickCoupons</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"> 
+	<!--<link rel="stylesheet" href="min.css" />-->
+	<!--<link rel="stylesheet"  href="css/themes/g.css" />-->
+	<link type="text/css" rel="stylesheet" href="css/css.css" />
+	<link rel="stylesheet" href="themes/custom-theme.css" />
+	<link rel="stylesheet" href="css/jqmStructure.css" /> 
+        <script type="text/javascript" src="js/jq191.min.js"></script>
+        <script type="text/javascript" src="js/jqm132.js"></script>
+	<script src="js/load2.js" type="text/javascript" ></script>
+	<!--<link rel="stylesheet" href="jquery.mobile.actionsheet.css" />-->
+	<!--<script type="text/javascript" src="jquery.mobile.actionsheet.js"></script>-->
+	
+	<!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+	<script type="text/javascript" charset="utf-8" src="clipboardmanager.js"></script>
+	<script src="toast.js"></script>
+	<style type='text/css' rel='stylesheet'>
+		#login { background:transparent; }
+		#login input { display:inline; width:86%; padding:5px; margin:7px; }
+		
+		 .ui-icon-myapp-email {
+			float: left;
+    background-image: url("images/facebook.png") !important;/*I added the !important, I found that this rule was being overwritten*/
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    }
+		
+		
+	</style>
+	
+	
+</head> 
+<body>
+            <div data-role="page" data-theme="b" id="detail"  >
+        
+					<!--  Logo -->
+			<div data-role="header"data-theme="b" id=heade>
+				<a href="#" data-rel="back" data-add-back-btn="true" data-back-btn-text="Back" data-direction="reverse">back</a>
+	                <h1>detail page</h1>
+			<!--<a href="index.html" data-icon="home" class="ui-btn-right"data-iconpos="notext"></a>-->
+			<!--<a class="ui-btn-right" data-role="actionsheet">Share</a>-->
+		<!--<div>-->
+		<!--	<a data-role="button" href="#" onclick="shareFacebook()">Face Book</a>-->
+		<!--	<a data-role="button" href="#" onclick="shareTwitter()"">Twitter</a>-->
+		<!--	<a data-role="button" href="#"onclick="shareMail()">Mail</a>-->
+		<!--	<br/>-->
+		<!--	<a data-role="button" data-rel="close" href="#">Cancel</a>-->
+		<!--</div>-->
+		
+		                 <a href="#" onclick="javascript:onclickd()"class="ui-btn-right" data-icon="forward" data-theme="b" >Share</a>
+				<a id="dial"href="#popupMenu" class="ui-btn-right" data-rel="popup"  data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e" data-position-to="window"   style="display: none">Share</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="b">
+            <li data-role="divider" data-theme="a">Share This Coupon</li>
+            <li><a href="#"onclick="shareFacebook()"><img src="images/facebook.png" class="ui-li-icon">Face Book</a></li>
+            <li><a href="#"onclick="shareTwitter()"><img src="images/twitter.png" class="ui-li-icon">Twitter</a></li>
+            <li><a href="#"onclick="shareMail()"><img src="images/email.png" class="ui-li-icon">Mail</a></li>
+	    
+            <li><a href="#" onclick="dohide()">Cancel</a></li>
+        </ul>
+</div>
+			
+                        </div>
+			
+			<div data-role =content>
+			
+	                <div id="detailpanel" data-inset="true" data-theme="a">
+				<div id="grid" class="ui-grid-a">
+					<div id="postercell" class="ui-block-a"></div>
+					<div id="infocell" class="ui-block-b"></div>
+					<!--<textarea cols="8" rows="50" id="couponTiltle">-->
+			        </div>				
+			</div>
+			<div data-role="content" id="couponTitle"></div>
+					
+			
+		
+			<!--  Detailed info container -->
+			<!--<div id="detailpanel" data-inset="true" data-theme="a">
+				<div id="grid" class="ui-grid-a">
+					<div id="postercell" class="ui-block-a"></div>
+					<div id="infocell" class="ui-block-b"></div>
+				</div>
+			</div>
+			-->
+			<!-- Ajax loader -->
+			<div id="detail-loader"><h4>Loading...</h4></div>
+			<div class="promotion_code" id=promotion_code1></div>
+			<div class="promotion_code" id=promotion_code>
+			<center><div id="code-cell"class="code"></div></center></div>
+			<div class="promotion_code" id=promotion_code2></div>
+			<center><div id="gotosite"></div></center>
+
+	</div> 
+        
+	
+	
+	
+	
+	<script  type=text/javascript>
+		$(document).delegate("#detail", "pagebeforeshow", function() {
+			
+			alert("under detail page and id is" + sessionStorage.getItem('id'));
+			couponDetail(sessionStorage.getItem('id'));
+	
+  
+});
+</script>
+   </body>
